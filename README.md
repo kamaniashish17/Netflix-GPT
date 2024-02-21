@@ -2,6 +2,8 @@
 -   First we configured the repo by using create react app
 -   Then we configured talwind css according to the framework guides
 
+- Header Created (Without Authentication)
+
 # Features 
 -   Login/SignUp
     -   SignIn/SignUp Form
