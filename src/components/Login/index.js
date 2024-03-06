@@ -10,10 +10,9 @@ import {
 } from "firebase/auth";
 import { auth } from "../../utils/firebase";
 import { useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
 import { addUser } from "../../utils/userSlice";
+import { LOGIN_IMAGE_URL, PROFILE_URL } from "../../utils/constants";
 const Login = () => {
-  const navigate = useNavigate();
   const [isSignInForm, setIsSignInForm] = useState(true);
   const [errorMessage, setErrorMessage] = useState(null);
   const email = useRef(null);
@@ -46,7 +45,6 @@ const Login = () => {
           // Signed in
           const user = userCredential.user;
           console.log("Successfully Signed In!!!!!!!", user);
-          navigate("/browse");
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -74,17 +72,18 @@ const Login = () => {
           console.log("Successfully registered!!!!!", user);
           updateProfile(user, {
             displayName: name.current.value,
+            photoURL:PROFILE_URL
           })
             .then(() => {
-              const { uid, email, displayName } = auth.currentUser;
+              const { uid, email, displayName, photoURL } = auth.currentUser;
               dispatch(
                 addUser({
                   uid: uid,
                   email: email,
                   displayName: displayName,
+                  photoURL:photoURL,
                 })
               );
-              navigate("/browse");
             })
             .catch((error) => {
               setErrorMessage(error.message);
@@ -102,7 +101,7 @@ const Login = () => {
     <div>
       <div className="absolute">
         <img
-          src="https://assets.nflxext.com/ffe/siteui/vlv3/c0b69670-89a3-48ca-877f-45ba7a60c16f/6f5fcbd6-993f-4d76-b207-799c937026ae/US-en-20240212-popsignuptwoweeks-perspective_alpha_website_small.jpg"
+          src={LOGIN_IMAGE_URL}
           alt="backgroundLoginImage"
         />
       </div>

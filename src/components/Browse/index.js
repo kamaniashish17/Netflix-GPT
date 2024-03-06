@@ -1,11 +1,25 @@
 import React from "react";
-import Header from "../Header";
+import useNowPlayingMovies from "../../hooks/useNowPlayingMovies";
+import VideoSection from "../VideoSectionComponent";
+import MoviesRowSection from "../MovieRowsComponent";
 
 const Browse = () => {
+  useNowPlayingMovies();
+  /**
+   * Main Container
+   *  - VideoBackground
+   *  - Video Title
+   *
+   * Secondary Container
+   *  - MovieList * n
+   *  - Cards * n
+   */
   return (
-    <div>
-      <Header />
-      <div>Browse</div>
+    <div className="relative">
+      <div>
+        <VideoSection />
+        <MoviesRowSection />
+      </div>
     </div>
   );
 };
