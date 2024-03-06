@@ -14,6 +14,16 @@
 - Created a redux store for storing user data by using user Slice
 - Implemented LogOut
 - Update Profile API also called up!
+- Unsubscribed to the onAuthStateChange Callback
+- Registered for TMDB API and created an App to get the Access Key and Access Token to fetch
+- Fetched the Data from TMDB API and stored under movies reducer
+- Build Custom Hooks for the same
+- Fetched the trailer of the Movie showing in browse page
+- Created MovieSlice for storing the NowPlayingMovies Data
+- Divided the BrowsePage into two sections:- -> VideoSection and MoviesRowSection
+- Embedded the trailer video using youtube embedded
+
+
 
 
 # Features 
