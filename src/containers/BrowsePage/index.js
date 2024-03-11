@@ -2,7 +2,7 @@ import React from "react";
 import Header from "../../components/Header";
 import Browse from "../../components/Browse";
 
-const LoginPage = () => {
+const BrowsePage = () => {
   return (
     <div>
       <div>
@@ -15,4 +15,4 @@ const LoginPage = () => {
   );
 };
 
-export default LoginPage;
+export default BrowsePage;

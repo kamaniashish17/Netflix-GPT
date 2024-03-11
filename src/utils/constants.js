@@ -17,4 +17,6 @@ export const API_OPTIONS = {
 
 export const IMAGE_URL_PATH = 'https://image.tmdb.org/t/p/w500/'
 
+export const SUPPORTED_LANGUAGES = [{identifier:"en", name:"English"},{identifier:"es", name:"Espanol"},{identifier:"hindi", name:"Hindi"}]
+
   
