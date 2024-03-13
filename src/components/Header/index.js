@@ -79,11 +79,11 @@ const Header = () => {
     <div
       className={
         !user
-          ? `absolute w-full px-8 py-2 bg-gradient-to-br from-black z-10 flex justify-between`
-          : ` absolute w-full px-8 py-2 bg-gradient-to-br from-black z-10 flex justify-between`
+          ? `absolute w-full px-8 py-2 bg-gradient-to-br from-black z-10 flex justify-between flex-col md:flex-row`
+          : ` absolute w-full px-8 py-2 bg-gradient-to-br from-black z-10 flex justify-between flex-col md:flex-row`
       }
     >
-      <img src={LOGO_URL} alt="logo" className="w-48" />
+      <img src={LOGO_URL} alt="logo" className="w-48 mx-auto md:mx-0" />
 
       {user && (
         <div className="flex p-2 items-center">
