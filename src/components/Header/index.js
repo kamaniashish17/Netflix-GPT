@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { useDispatch, useSelector } from "react-redux";
 import { addUser, removeUser } from "../../utils/userSlice";
-import store from "../../utils/store";
 import {
   LOGO_URL,
   PROFILE_URL,
@@ -35,10 +34,8 @@ const Header = () => {
   };
 
   useEffect(() => {
-    console.log("Hi");
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
-        console.log("Hi");
         const { uid, email, displayName } = user;
         dispatch(
           addUser({

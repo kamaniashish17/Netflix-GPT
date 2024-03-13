@@ -46,7 +46,7 @@
 -   NetFlix GPT
     - Search Bar
     - Movie Suggestion
-    - Data Visualization
+    - Data Visualization - To be discussed with the professor
 
 
 
